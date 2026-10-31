@@ -282,6 +282,7 @@
     #work .text-rose-300 { color: #a23c50 !important; }
     .btn-shimmer,
     .btn-shimmer .text-white { color: #fff !important; }
+    .brand-mark { color: #fff !important; }
     [class~="aspect-[4/5]"] .text-white { color: #fff !important; }
     .field {
       background: #fff;
@@ -317,7 +318,7 @@
     <nav class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
       <div class="flex h-[72px] items-center justify-between">
         <a href="#home" class="group flex items-center gap-2.5">
-          <span class="relative grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-violet-600 via-fuchsia-500 to-cyan-400 text-white font-sans font-extrabold text-lg shadow-lg shadow-violet-900/40">
+          <span class="brand-mark relative grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-700 text-white font-sans font-extrabold text-lg shadow-lg shadow-emerald-900/20">
             Y
             <span class="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/25"></span>
           </span>
@@ -344,7 +345,7 @@
             <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-5.7c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.1-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.8.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg>
           </a>
           <a href="#contact"
-             class="btn-shimmer ml-1 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-violet-900/40 transition hover:shadow-violet-700/50">
+             class="btn-shimmer ml-1 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-700 to-teal-700 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-900/20 transition hover:shadow-emerald-700/25">
             Let's talk
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -366,7 +367,7 @@
             <li><a class="block rounded-xl px-3 py-3 hover:bg-white/5 hover:text-white" href="#profiles">Profiles</a></li>
             <li><a class="block rounded-xl px-3 py-3 hover:bg-white/5 hover:text-white" href="#contact">Contact</a></li>
           </ul>
-          <a href="#contact" class="mt-2 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-500 px-5 py-3 text-sm font-semibold text-white">
+          <a href="#contact" class="mt-2 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-700 to-teal-700 px-5 py-3 text-sm font-semibold text-white">
             Let's talk
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -416,7 +417,7 @@
 
             <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a href="#work"
-                 class="btn-shimmer group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-500 px-7 py-3.5 text-sm font-semibold text-white shadow-xl shadow-violet-900/40 transition hover:shadow-fuchsia-700/40">
+                 class="btn-shimmer group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-700 px-7 py-3.5 text-sm font-semibold text-white shadow-xl shadow-emerald-900/20 transition hover:shadow-emerald-700/25">
                 Explore my work
                 <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
@@ -452,8 +453,10 @@
                 <div class="relative overflow-hidden rounded-[1.6rem] bg-surface">
                   <!-- Photo -->
                   <div class="relative aspect-[4/5] overflow-hidden">
-                    <img src="assets/portrait.jpg" alt="Portrait of Yulianto" loading="eager" decoding="async"
-                         class="h-full w-full object-cover object-top" />
+                    <img id="heroPortraitA" src="assets/portrait.jpg" alt="Portrait of Yulianto" loading="eager" decoding="async"
+                         class="absolute inset-0 h-full w-full object-cover object-top opacity-100 transition-opacity duration-700" />
+                    <img id="heroPortraitB" alt="" aria-hidden="true" decoding="async"
+                         class="absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-700" />
                     <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
 
                     <div class="absolute inset-x-0 bottom-0 p-6">
@@ -600,6 +603,23 @@
                   <p class="text-sm font-semibold text-white">Visual creator &amp; YouTuber</p>
                 </div>
                 <p class="mt-3 text-sm text-slate-400">Photography, videography and YouTube content creation.</p>
+              </div>
+            </div>
+
+            <div class="reveal d3 mt-4 rounded-2xl border border-rose-200/70 bg-white/70 p-5 sm:p-6">
+              <div class="flex items-start gap-4">
+                <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-rose-100 text-rose-600">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">A personal note</p>
+                  <h3 class="mt-1 font-serif text-xl text-slate-900 sm:text-2xl">Open to meeting someone special</h3>
+                  <p class="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">Beyond work, I’m hoping to meet a kind, patient, and adventurous woman who enjoys warm-hearted conversation and building a genuine connection. If that sounds like you, I’d be happy to say hello.</p>
+                  <a href="#contact" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 transition hover:text-emerald-800">
+                    Say hello
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -987,6 +1007,13 @@
               </span>
               <svg class="h-4 w-4 text-slate-500 group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
+            <a href="https://youtube.com/@labinside" target="_blank" rel="noopener noreferrer" aria-label="YouTube channel: Labinside" class="lift group flex items-center justify-between rounded-2xl border border-white/8 bg-white/[0.025] px-4 py-3.5">
+              <span class="flex items-center gap-3">
+                <span class="grid h-9 w-9 place-items-center rounded-lg bg-rose-500/15 text-rose-300"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L16 12l-6.4 3.6Z"/></svg></span>
+                <span><span class="block text-sm font-semibold text-white">YouTube · Labinside</span><span class="block text-[11px] text-slate-500">Research &amp; engineering videos</span></span>
+              </span>
+              <svg class="h-4 w-4 text-slate-500 group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -1057,7 +1084,7 @@
                 <a href="https://youtube.com/@labinside" target="_blank" rel="noopener noreferrer" aria-label="YouTube channel: Labinside"
                    class="inline-flex h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3 text-slate-300 transition hover:-translate-y-1 hover:border-rose-400/60 hover:text-white hover:bg-rose-500/10">
                   <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L16 12l-6.4 3.6Z"/></svg>
-                  <span class="text-xs font-semibold">YouTube · Labinside</span>
+                  <!--span class="text-xs font-semibold">YouTube · Labinside</span-->
                 </a>
                 <a href="https://wa.me/6285290553327" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
                    class="grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-300 transition hover:-translate-y-1 hover:border-emerald-400/60 hover:text-white hover:bg-emerald-500/10">
@@ -1121,7 +1148,7 @@
                 <div class="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center sm:justify-between">
                   <p class="text-xs text-slate-500">Your details stay private. Promise.</p>
                   <button type="submit"
-                          class="btn-shimmer inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-500 px-7 py-3.5 text-sm font-semibold text-white shadow-xl shadow-violet-900/40 transition hover:shadow-fuchsia-700/40 disabled:cursor-not-allowed disabled:opacity-70">
+                          class="btn-shimmer inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-700 px-7 py-3.5 text-sm font-semibold text-white shadow-xl shadow-emerald-900/20 transition hover:shadow-emerald-700/25 disabled:cursor-not-allowed disabled:opacity-70">
                     <span id="btnLabel">Send message</span>
                     <svg id="btnIcon" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </button>
@@ -1140,7 +1167,7 @@
     <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 py-12">
       <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
         <a href="#home" class="group flex items-center gap-2.5">
-          <span class="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-violet-600 via-fuchsia-500 to-cyan-400 text-sm font-extrabold text-white">Y</span>
+          <span class="brand-mark grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-700 text-sm font-extrabold text-white">Y</span>
           <span class="text-sm font-semibold text-slate-200">Yulianto<span class="text-violet-400">.</span></span>
         </a>
 
@@ -1178,6 +1205,48 @@
 
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    /* Hero portrait slideshow */
+    var heroPortraits = [
+      'assets/portrait.jpg',
+      'assets/_DSC6223~2.JPG',
+      'assets/_DSC4419~2.JPG',
+      'assets/LAB09675.JPG',
+      'assets/DSC05728.JPG',
+      'assets/DSC05649~2.JPG',
+      'assets/DSC05438~2.JPG',
+      'assets/DSC02898.JPG'
+    ];
+    var portraitLayers = [
+      document.getElementById('heroPortraitA'),
+      document.getElementById('heroPortraitB')
+    ];
+    var activePortraitLayer = 0;
+    var activePortraitIndex = 0;
+    if (portraitLayers[0] && portraitLayers[1]) {
+      window.setInterval(function () {
+        if (document.hidden || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var nextIndex = (activePortraitIndex + 1) % heroPortraits.length;
+        var nextLayerIndex = 1 - activePortraitLayer;
+        var nextLayer = portraitLayers[nextLayerIndex];
+        var nextImage = new Image();
+        nextImage.onload = function () {
+          nextLayer.src = heroPortraits[nextIndex];
+          nextLayer.alt = 'Portrait of Yulianto';
+          nextLayer.setAttribute('aria-hidden', 'false');
+          portraitLayers[activePortraitLayer].setAttribute('aria-hidden', 'true');
+          nextLayer.classList.replace('opacity-0', 'opacity-100');
+          portraitLayers[activePortraitLayer].classList.replace('opacity-100', 'opacity-0');
+          activePortraitLayer = nextLayerIndex;
+          activePortraitIndex = nextIndex;
+        };
+        nextImage.onerror = function () {
+          console.error('Unable to load hero photo:', heroPortraits[nextIndex]);
+        };
+        nextImage.src = heroPortraits[nextIndex];
+      }, 5000);
+    }
 
     /* Navbar scroll state */
     var navbar = document.getElementById('navbar');
