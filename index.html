@@ -1223,16 +1223,16 @@
     ];
     var activePortraitLayer = 0;
     var activePortraitIndex = 0;
+    var isPortraitLoading = false;
     if (portraitLayers[0] && portraitLayers[1]) {
       window.setInterval(function () {
-        if (document.hidden || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (document.hidden || isPortraitLoading || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
         var nextIndex = (activePortraitIndex + 1) % heroPortraits.length;
         var nextLayerIndex = 1 - activePortraitLayer;
         var nextLayer = portraitLayers[nextLayerIndex];
-        var nextImage = new Image();
-        nextImage.onload = function () {
-          nextLayer.src = heroPortraits[nextIndex];
+        isPortraitLoading = true;
+        function showNextPortrait() {
           nextLayer.alt = 'Portrait of Yulianto';
           nextLayer.setAttribute('aria-hidden', 'false');
           portraitLayers[activePortraitLayer].setAttribute('aria-hidden', 'true');
@@ -1240,12 +1240,22 @@
           portraitLayers[activePortraitLayer].classList.replace('opacity-100', 'opacity-0');
           activePortraitLayer = nextLayerIndex;
           activePortraitIndex = nextIndex;
-        };
-        nextImage.onerror = function () {
+          isPortraitLoading = false;
+        }
+        function skipNextPortrait() {
           console.error('Unable to load hero photo:', heroPortraits[nextIndex]);
           activePortraitIndex = nextIndex;
+          isPortraitLoading = false;
+        }
+        nextLayer.onload = function () {
+          if (typeof nextLayer.decode === 'function') {
+            nextLayer.decode().then(showNextPortrait).catch(skipNextPortrait);
+          } else {
+            showNextPortrait();
+          }
         };
-        nextImage.src = heroPortraits[nextIndex];
+        nextLayer.onerror = skipNextPortrait;
+        nextLayer.src = heroPortraits[nextIndex];
       }, 5000);
     }
 
