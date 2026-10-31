@@ -1209,8 +1209,8 @@
     /* Hero portrait slideshow */
     var heroPortraits = [
       'assets/portrait.jpg',
-      'assets/_DSC6223~2.JPG',
-      'assets/_DSC4419~2.JPG',
+      'assets/dsc6223-2.jpg',
+      'assets/dsc4419-2.jpg',
       'assets/LAB09675.JPG',
       'assets/DSC05728.JPG',
       'assets/DSC05649~2.JPG',
@@ -1243,6 +1243,7 @@
         };
         nextImage.onerror = function () {
           console.error('Unable to load hero photo:', heroPortraits[nextIndex]);
+          activePortraitIndex = nextIndex;
         };
         nextImage.src = heroPortraits[nextIndex];
       }, 5000);

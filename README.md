@@ -25,7 +25,14 @@ Built with **HTML5**, **CSS3**, **Tailwind CSS**, and **vanilla JavaScript** —
 .
 ├── index.html          # the entire site (HTML + CSS + JS)
 ├── assets/
-│   └── portrait.jpg    # optimized profile photo (1000×1777, ~213 KB)
+│   ├── portrait.jpg    # optimized profile photo (1000×1777, ~213 KB)
+│   ├── dsc6223-2.jpg   # slideshow photo
+│   ├── dsc4419-2.jpg   # slideshow photo
+│   ├── LAB09675.JPG
+│   ├── DSC05728.JPG
+│   ├── DSC05649~2.JPG
+│   ├── DSC05438~2.JPG
+│   └── DSC02898.JPG
 ├── _DSC9415.JPG        # original photo (keep or delete)
 ├── New Text Document.txt   # original profile notes
 └── README.md
@@ -86,6 +93,7 @@ Until then, the form runs in demo mode: it validates, shows a success toast, and
   npx tailwindcss -i input.css -o styles.css --minify
   ```
 - `_DSC9415.JPG` is the original 11 MB photo. `assets/portrait.jpg` is the optimized version used by the site; you can delete the original to keep the repo small.
+- GitHub Pages uses Jekyll by default, which excludes files whose names start with `_`. Slideshow images therefore use names without a leading underscore so they are published correctly.
 - All decorative visuals are CSS/SVG only, so there are no extra image dependencies.
 
 ## License
